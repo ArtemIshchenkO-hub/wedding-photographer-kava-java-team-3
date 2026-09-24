@@ -1,0 +1,67 @@
+html {
+  height: 100%;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: var(--font-size-main);
+  font-family: var(--font-primary);
+  color: var(--color-black);
+  background-color: var(--color-background);
+}
+
+h1,
+h2 {
+  font-family: var(--font-secondary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+button {
+  user-select: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  h1 {
+    font-size: 56px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
