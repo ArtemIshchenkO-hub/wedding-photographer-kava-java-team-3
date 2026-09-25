@@ -8,14 +8,14 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-size: var(--font-size-main);
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   color: var(--color-black);
   background-color: var(--color-background);
 }
 
 h1,
 h2 {
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
   line-height: 1.2;
   letter-spacing: -0.01em;
   font-weight: 500;
