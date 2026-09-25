@@ -1,0 +1,44 @@
+.container-decoration-benefits {
+    margin: 0 auto 16px;
+}
+
+.container-benefits {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke: #000;
+    margin: 0 auto 12px;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.benefits-item {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+.benefits-list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+.container-benefits {
+    padding-top: 92px;
+    padding-bottom: 92px;
+}
+
+.benefits-list {
+    gap: 175px;
+}
+}
