@@ -27,7 +27,6 @@
   padding: 64px 20px;
   border-radius: var(--border-radius-large);
   background: var(--color-background);
-  color: var(--color-black);
 }
 
 .success-modal-content {
@@ -45,8 +44,6 @@
 .success-modal-title {
   font-family: var(--font-primary);
   font-size: 32px;
-  font-weight: 500;
-  line-height: 1.2;
   letter-spacing: normal;
 }
 
@@ -59,8 +56,6 @@
 
 .success-modal-text {
   font-family: var(--font-secondary);
-  font-size: 18px;
-  line-height: 1.5;
 }
 
 .success-modal-close {
@@ -72,9 +67,7 @@
   width: 32px;
   height: 32px;
   padding: 4px;
-  border: 0;
   border-radius: var(--border-radius-small);
-  background: transparent;
   color: inherit;
   transition: background-color var(--transition-base);
 }
