@@ -20,8 +20,9 @@
   border: var(--border-main);
   border-radius: var(--border-radius-large);
   padding: 48px 20px;
-  min-width: 320px;
+  min-width: 280px;
   max-width: 1280px;
+  width: 335px;
   height: 843px;
   background-color: var(--color-card);
 }
@@ -65,10 +66,10 @@
   font-size: 16px;
 }
 
-.footer-nav-link,
+/* .footer-nav-link,
 .footer-socials-link {
   padding: 0 6px;
-}
+} */
 
 .footer-socials-container {
   gap: 16px;
@@ -134,10 +135,10 @@
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
   #footer {
-    padding: 40px 8px;
+    padding: 40px 20px;
   }
   .footer-container {
-    min-width: 304px;
+    width: 100%;
     height: auto;
   }
   .footer-copyright-text {

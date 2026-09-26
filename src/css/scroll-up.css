@@ -1,0 +1,56 @@
+.scroll-up {
+  background-color: transparent;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition:
+    opacity var(--transition-base),
+    background-color var(--transition-base);
+  border: var(--border-main);
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+.scroll-up:hover,
+.scroll-up:focus {
+  background-color: var(--color-accent-light);
+}
+.scroll-up:active {
+  background-color: var(--color-card);
+}
+.scroll-up:disabled {
+  opacity: var(--opacity-btn-disabled);
+  cursor: auto;
+  pointer-events: none;
+}
+.scroll-up-icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-90deg);
+  stroke: var(--color-black);
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .scroll-up {
+    bottom: 54px;
+    right: 54px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .scroll-up {
+    bottom: 32px;
+    right: 32px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .scroll-up {
+    bottom: 48px;
+    right: 48px;
+  }
+}
