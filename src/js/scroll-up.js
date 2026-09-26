@@ -4,3 +4,11 @@ export function scrollUp() {
   pageTop.getBoundingClientRect().top;
   window.scrollTo({ top: pageTop });
 }
+
+export function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollUpBtn.style.display = 'block';
+  } else {
+    scrollUpBtn.style.display = 'none';
+  }
+}
