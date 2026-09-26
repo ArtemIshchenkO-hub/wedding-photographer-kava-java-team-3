@@ -1,6 +1,8 @@
 :root {
-  --font-secondary: 'Cormorant', serif;
-  --font-primary: 'Mulish', sans-serif;
+
+  --font-primary: 'Mulish', serif;
+  --font-secondary: 'Cormorant', sans-serif;
+
   --font-size-main: 18px;
 
   --color-white: #fff;
