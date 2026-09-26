@@ -185,36 +185,21 @@
 }
 
 .desktop-nav a {
-  display: block;
-
   padding: 8px 12px;
 
-  color: var(--color-black);
-  text-decoration: none;
-
   font-size: 16px;
-  line-height: 1.2;
 
-  border: 1px solid transparent;
   border-radius: 4px;
 
-  background-color: transparent;
-
-  transition: border-color 250ms ease;
+  transition: background-color var(--transition-base);
 }
 
 .desktop-nav a:hover {
-  border-color: var(--color-black);
-  background-color: transparent;
-  color: var(--color-black);
+  background-color: var(--color-hover-focus-link-icon);
 }
 
 .desktop-nav a:focus-visible {
-  border-color: var(--color-black);
-  background-color: transparent;
-  color: var(--color-black);
-
-  outline: none;
+  background-color: var(--color-hover-focus-link-icon);
 }
 
 @media screen and (min-width: 768px) {
@@ -223,7 +208,6 @@
     padding: 0 32px;
     height: 72px;
   }
-
   .logo {
     width: 78px;
     height: 68px;
