@@ -10,12 +10,12 @@
 
 .faq-title {
   margin-bottom: 24px;
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
 }
 
 .faq-desc {
   margin-bottom: 40px;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-size: var(--font-size-main);
   text-align: center;
   color: var(--color-black);
@@ -46,7 +46,7 @@
 }
 
 .faq-question-text {
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-weight: 700;
 }
 
@@ -106,7 +106,7 @@
 
 .faq-answer-text {
   padding: 0 24px 24px 24px;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   font-size: 16px;
 }
 
