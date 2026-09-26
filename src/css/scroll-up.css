@@ -14,16 +14,19 @@
 
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: max(20px, calc((100vw - 375px) / 2 + 20px));
   z-index: 99;
 }
+
 .scroll-up:hover,
 .scroll-up:focus {
   background-color: var(--color-accent-light);
 }
+
 .scroll-up:active {
   background-color: var(--color-card);
 }
+
 .scroll-up:disabled {
   opacity: var(--opacity-btn-disabled);
   cursor: auto;
@@ -45,12 +48,12 @@
 @media screen and (min-width: 768px) {
   .scroll-up {
     bottom: 32px;
-    right: 32px;
+    right: max(32px, calc((100vw - 768px) / 2 + 32px));
   }
 }
 @media only screen and (min-width: 1440px) {
   .scroll-up {
     bottom: 48px;
-    right: 48px;
+    right: max(64px, calc((100vw - 1440px) / 2 + 64px));
   }
 }
