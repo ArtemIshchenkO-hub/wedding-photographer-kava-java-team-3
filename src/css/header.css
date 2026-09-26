@@ -5,6 +5,7 @@
 
 .header-container {
   width: 100%;
+  max-width: 375px;
   height: 80px;
   margin: 0 auto;
   padding: 0 20px;
