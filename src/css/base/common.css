@@ -140,14 +140,3 @@ body.is-loading::after {
     height: 70px;
   }
 }
-
-.iziToast-wrapper {
-  right: 20px !important;
-  left: auto !important;
-  transform: none !important;
-}
-
-.iziToast-container {
-  right: 20px !important;
-  left: auto !important;
-}
