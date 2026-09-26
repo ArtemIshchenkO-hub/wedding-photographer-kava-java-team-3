@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/wedding-photographer-kava-java-team-3/assets/favicon-BBFyGPBA.svg" />
+    <link rel="icon" type="image/svg+xml" href="/wedding-photographer-kava-java-team-3/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Maria Kovalenko wedding photography" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,21 +20,17 @@
     />
     <title>Maria Kovalenko Photography</title>
     <script type="module" crossorigin src="/wedding-photographer-kava-java-team-3/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/wedding-photographer-kava-java-team-3/assets/index-o_8aPVuu.css">
+    <link rel="stylesheet" crossorigin href="/wedding-photographer-kava-java-team-3/assets/index-ByXfOTQi.css">
   </head>
 
   <body>
     <header class="header" id="header">
   <div class="header-container">
-    <a
-      class="logo-link"
-      href="/"
-      aria-label="Maria Kovalenko Photography"
-    >
+    <a class="logo-link" href="/" aria-label="Maria Kovalenko Photography">
       <img
         src="/wedding-photographer-kava-java-team-3/favicon.svg"
         alt="Maria Kovalenko Photography"
-        class="logo"
+        class="logo logo-header"
         width="41"
         height="32"
       />
@@ -47,10 +43,10 @@
       <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="desktop-book-btn" href="#contacts">Book a Session</a>
+    <a class="desktop-book-btn button-main" href="#contacts">Book a Session</a>
 
     <button
-      class="menu"
+      class="menu menu-button"
       type="button"
       aria-label="Open menu"
       aria-expanded="false"
@@ -63,11 +59,7 @@
 
   <div class="mobile-menu">
     <div class="mobile-menu-header">
-      <a
-        class="logo-link"
-        href="/"
-        aria-label="Maria Kovalenko Photography"
-      >
+      <a class="logo-link" href="/" aria-label="Maria Kovalenko Photography">
         <img
           src="/wedding-photographer-kava-java-team-3/favicon.svg"
           alt="Maria Kovalenko Photography"
@@ -77,13 +69,7 @@
         />
       </a>
 
-      <button
-        class="close"
-        type="button"
-        aria-label="Close menu"
-      >
-        ✕
-      </button>
+      <button class="close" type="button" aria-label="Close menu">✕</button>
     </div>
 
     <nav class="mobile-nav" aria-label="Mobile navigation">
@@ -93,9 +79,7 @@
       <a href="#faq">FAQ</a>
     </nav>
 
-    <a class="mobile-book-btn" href="#contacts">
-      Book a Session
-    </a>
+    <a class="mobile-book-btn button-main" href="#contacts"> Book a Session </a>
   </div>
 </header>
 
@@ -189,14 +173,11 @@
 </section>
 
       <section class="feedbacks" id="feedbacks">
-  <div class="container">
-    <div class="feedbacks-decor"></div>
-
+  <div class="container container-decoration feedback-container">
     <h2 class="feedbacks-title">Words from Our Wonderful Couples</h2>
 
     <p class="feedbacks-description">
-      Read what the couples who entrusted<br class="mob-break" />
-      us with their most precious memories<br class="mob-break" />
+      Read what the couples who entrusted us with their most precious memories
       have to say.
     </p>
 
@@ -210,8 +191,16 @@
       <div class="swiper-pagination"></div>
 
       <div class="feedback-navigation">
-        <button type="button" class="btn-prev"></button>
-        <button type="button" class="btn-next">Я</button>
+        <button type="button" class="btn-prev">
+          <svg class="pagination-icon" width="24" height="24">
+            <use href="/wedding-photographer-kava-java-team-3/assets/sprite-BaAZugjl.svg#icon-arrow_back"></use>
+          </svg>
+        </button>
+        <button type="button" class="btn-next">
+          <svg class="pagination-icon" width="24" height="24">
+            <use href="/wedding-photographer-kava-java-team-3/assets/sprite-BaAZugjl.svg#icon-arrow_forward"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -401,7 +390,7 @@
           <h3 class="footer-nav-title">Menu</h3>
           <ul class="footer-nav-list">
             <li class="footer-nav-item">
-              <a class="footer-nav-link" href="./">Home</a>
+              <a class="footer-nav-link" href="../index.html">Home</a>
             </li>
             <li class="footer-nav-item">
               <a class="footer-nav-link" href="#about">About Me</a>
