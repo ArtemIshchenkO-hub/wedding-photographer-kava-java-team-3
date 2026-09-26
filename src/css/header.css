@@ -1,0 +1,296 @@
+.header {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.header-container {
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+  width: 41px;
+  height: 32px;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.desktop-book-btn {
+  display: none;
+}
+
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 24px;
+  height: 18px;
+
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.menu span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+
+  width: 100%;
+  max-width: 375px;
+  height: 100dvh;
+
+  background-color: #ffffff;
+
+  z-index: 1000;
+
+  visibility: hidden;
+  transform: translateX(50%);
+
+  transition:
+    transform 300ms ease,
+    visibility 300ms ease;
+}
+
+.mobile-menu.is-open {
+  visibility: visible;
+  transform: translateX(-50%);
+}
+
+
+.mobile-menu-header {
+  width: 100%;
+  height: 80px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.close {
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+
+  font-size: 24px;
+  line-height: 1;
+
+  color: #000000;
+
+  cursor: pointer;
+}
+
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  padding: 40px 24px 0;
+}
+
+.mobile-nav a {
+  display: block;
+
+  color: #000000;
+  text-decoration: none;
+
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+
+.mobile-book-btn,
+.desktop-book-btn {
+  border: 2px solid #dcc110;
+  border-radius: 8px;
+
+  background-color: #dcc110;
+  color: #000000;
+
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 250ms ease,
+    border-color 250ms ease,
+    color 250ms ease;
+}
+
+
+.mobile-book-btn {
+  display: block;
+
+  width: calc(100% - 48px);
+
+  margin: 40px 24px 0;
+  padding: 16px 24px;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+
+.mobile-book-btn,
+.desktop-book-btn {
+  background-color: #dcc110;
+  border-color: #dcc110;
+  color: #000000;
+}
+
+
+.mobile-book-btn:hover,
+.desktop-book-btn:hover {
+  background-color: #ffffff;
+  border-color: #dcc110;
+  color: #000000;
+}
+
+
+.mobile-book-btn:focus-visible,
+.desktop-book-btn:focus-visible {
+  background-color: #ffffff;
+  border-color: #dcc110;
+  color: #000000;
+
+  outline: 2px solid #dcc110;
+  outline-offset: 2px;
+}
+
+
+.mobile-book-btn:active,
+.desktop-book-btn:active {
+  background-color: #e6d357;
+  border-color: #e6d357;
+  color: #000000;
+}
+
+
+.desktop-nav a {
+  display: block;
+
+  padding: 8px 12px;
+
+  color: #000000;
+  text-decoration: none;
+
+  font-size: 16px;
+  line-height: 1.2;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background-color: transparent;
+
+  transition: border-color 250ms ease;
+}
+
+
+.desktop-nav a:hover {
+  border-color: #000000;
+  background-color: transparent;
+  color: #000000;
+}
+
+.desktop-nav a:focus-visible {
+  border-color: #000000;
+  background-color: transparent;
+  color: #000000;
+
+  outline: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+
+  .menu {
+    display: none;
+  }
+
+
+  .mobile-menu {
+    display: none;
+  }
+
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-left: auto;
+    margin-right: 32px;
+  }
+
+  .desktop-nav a {
+    display: block;
+  }
+
+  .desktop-book-btn {
+    display: block;
+
+    padding: 12px 20px;
+
+    font-size: 16px;
+    line-height: 1.2;
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .header-container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-left: auto;
+    margin-right: 32px;
+  }
+
+  .desktop-book-btn {
+    display: block;
+
+    padding: 14px 24px;
+  }
+}
