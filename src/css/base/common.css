@@ -38,11 +38,11 @@
 
 .button-main:is(:hover, :focus-visible) {
   background-color: transparent;
-  border: 2px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
 }
 
 .button-main:active {
-  border: 2px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
   box-shadow: var(--shadow-active);
   background-color: var(--color-accent-light);
 }
