@@ -1,0 +1,109 @@
+.success-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgb(0 0 0 / 25%);
+}
+
+.success-modal-backdrop.is-open {
+  display: grid;
+}
+
+.success-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: 335px;
+  max-height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 64px 20px;
+  border-radius: var(--border-radius-large);
+  background: var(--color-background);
+}
+
+.success-modal-content {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 640px;
+  gap: 16px;
+  text-align: center;
+}
+
+.success-modal-title {
+  font-size: 32px;
+}
+
+.success-modal-image {
+  width: 100%;
+  aspect-ratio: 295 / 207;
+  object-fit: cover;
+  border-radius: var(--border-radius-medium);
+}
+
+.success-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: var(--border-radius-small);
+  color: inherit;
+  transition: background-color var(--transition-base);
+}
+
+.success-modal-close:hover {
+  background-color: rgb(0 0 0 / 10%);
+}
+
+.success-modal-close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+body.success-modal-open {
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+  .success-modal-backdrop {
+    padding: 64px 32px;
+  }
+
+  .success-modal {
+    width: min(100%, 704px);
+    max-width: 768px;
+    padding: 64px 32px;
+  }
+
+  .success-modal-image {
+    aspect-ratio: 640 / 394;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .success-modal {
+    width: min(100%, 768px);
+    padding: 64px;
+  }
+}
+
+.success-modal-close svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
