@@ -2,6 +2,23 @@ const menuButton = document.querySelector('.menu');
 const closeButton = document.querySelector('.close');
 const mobileMenu = document.querySelector('.mobile-menu');
 
+const header = document.querySelector('.header');
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', updateHeaderOnScroll);
+
+function updateHeaderOnScroll() {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > header.offsetHeight) {
+    header.classList.add('hidden');
+  } else {
+    header.classList.remove('hidden');
+  }
+
+  lastScrollY = currentScrollY;
+}
+
 const mobileLinks = document.querySelectorAll(
   '.mobile-nav a, .mobile-book-btn'
 );
