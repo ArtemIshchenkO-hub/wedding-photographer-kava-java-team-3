@@ -114,7 +114,6 @@ export async function handleShowMoreClick() {
     removeLoadingState(refs.portfolioShowMoreBtn);
   }
 }
-
 export async function handleFormSubmit(event) {
   event.preventDefault();
   const formData = new FormData(event.target);

@@ -35,7 +35,11 @@ function handleKeydown(event) {
   }
 }
 
-closeButton?.addEventListener('click', closeSuccessModal);
-backdrop?.addEventListener('click', event => {
+function handleBackdropClick(event) {
   if (event.target === event.currentTarget) closeSuccessModal();
-});
+}
+
+export function initSuccessModal() {
+  closeButton?.addEventListener('click', closeSuccessModal);
+  backdrop?.addEventListener('click', handleBackdropClick);
+}

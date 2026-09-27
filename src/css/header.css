@@ -22,11 +22,11 @@
   justify-content: space-between;
 }
 
-.header:has(.mobile-menu.mobile-menu.is-open) .logo-header {
+.header:has(+ .mobile-menu.is-open) .logo-header {
   display: none;
 }
 
-.header:has(.mobile-menu.mobile-menu.is-open) .menu-button {
+.header:has(+ .mobile-menu.is-open) .menu-button {
   display: none;
 }
 
@@ -217,6 +217,7 @@
     padding: 0 32px;
     height: 72px;
   }
+
   .logo {
     width: 78px;
     height: 68px;
