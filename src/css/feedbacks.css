@@ -26,6 +26,10 @@
   min-height: 328px;
 }
 
+.feedback-author {
+  margin-top: auto;
+}
+
 .feedbacks-bottom-controls {
   display: flex;
   justify-content: space-between;
@@ -36,6 +40,8 @@
 .swiper-pagination {
   display: flex;
   gap: 8px;
+  position: static !important;
+  width: auto !important;
 }
 
 .swiper-pagination-bullet {
@@ -47,7 +53,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: var(--color-black);
+  background-color: var(--color-black) !important;
 }
 
 .feedback-navigation {
@@ -64,6 +70,13 @@
   border: var(--border-main);
 
   transition: opacity var(--transition-base);
+}
+
+.btn-prev:not(.swiper-button-disabled):hover,
+.btn-prev:not(.swiper-button-disabled):focus,
+.btn-next:not(.swiper-button-disabled):hover,
+.btn-next:not(.swiper-button-disabled):focus {
+  background-color: #e6d357;
 }
 
 .pagination-icon {
@@ -87,12 +100,11 @@
 
   .feedback-list {
     display: flex;
-    gap: 24px;
   }
 
   .feedbacks-card {
     padding: 20px;
-    flex-basis: calc((100% - 48px) / 3);
+
     min-height: 412px;
   }
 }
