@@ -78,6 +78,7 @@
 .faq-icon-close {
   opacity: 0;
   transform: scale(0.6);
+  stroke: var(--color-black);
 }
 
 .faq-item.is-open .faq-icon-plus {

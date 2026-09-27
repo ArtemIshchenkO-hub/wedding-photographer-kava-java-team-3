@@ -8,6 +8,7 @@ import {
   initGallery,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
+import './js/accordion.js';
 
 getPortfolioCategories();
 initGallery();
