@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
 import { openSuccessModal } from './success-modal';
 
 import {
@@ -140,10 +143,10 @@ async function handleFormSubmit(event) {
   }
 }
 
-export async function initFeedbcksSwiper() {
+export async function initFeedbacksSwiper() {
   try {
     const { feedbacks } = await fetchFeedbaks();
-    console.log(feedbacks);
+
     renderFeedbacks(feedbacks);
     new Swiper('.feedbacks-slider', {
       slidesPerView: 1,
