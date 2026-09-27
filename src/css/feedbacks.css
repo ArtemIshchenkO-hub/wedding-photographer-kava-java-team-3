@@ -13,21 +13,23 @@
   margin-inline: auto;
 }
 
-.feedbacks-card {
+.feedbacks-card.swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  background-color: var(--color-card);
+  justify-content: space-between;
+  align-items: flex-start;
 
+  background-color: var(--color-card);
   border: var(--border-main);
   border-radius: var(--border-radius-medium);
   padding: 32px;
-
   min-height: 328px;
 }
 
 .feedback-author {
-  margin-top: auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .feedbacks-bottom-controls {
@@ -38,22 +40,9 @@
 }
 
 .swiper-pagination {
-  display: flex;
-  gap: 8px;
+  --swiper-pagination-color: var(--color-black);
   position: static !important;
   width: auto !important;
-}
-
-.swiper-pagination-bullet {
-  width: 6px;
-  height: 6px;
-  background-color: #ccc;
-  opacity: 1;
-  border-radius: 50%;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--color-black) !important;
 }
 
 .feedback-navigation {
@@ -69,40 +58,41 @@
   padding: 12px;
   border: var(--border-main);
 
-  transition: opacity var(--transition-base);
+  transition:
+    box-shadow var(--transition-base),
+    background-color var(--transition-base),
+    opacity var(--transition-base);
 }
 
 .btn-prev:not(.swiper-button-disabled):hover,
-.btn-prev:not(.swiper-button-disabled):focus,
+.btn-prev:not(.swiper-button-disabled):focus-visible,
 .btn-next:not(.swiper-button-disabled):hover,
-.btn-next:not(.swiper-button-disabled):focus {
-  background-color: #e6d357;
+.btn-next:not(.swiper-button-disabled):focus-visible {
+  background-color: var(--color-accent-light);
+}
+
+.btn-prev:not(.swiper-button-disabled):active,
+.btn-next:not(.swiper-button-disabled):active {
+  box-shadow: var(--shadow-active);
+  background-color: var(--color-card);
 }
 
 .pagination-icon {
   stroke: var(--color-black);
 }
+
 .swiper-button-disabled {
-  opacity: 0.4;
+  opacity: var(--opacity-arrow-disabled);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 @media (min-width: 768px) {
-  .feedbacks-decor {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .feedbacks-description {
     max-width: 550px;
   }
 
-  .feedback-list {
-    display: flex;
-  }
-
-  .feedbacks-card {
+  .feedbacks-card.swiper-slide {
     padding: 20px;
 
     min-height: 412px;
@@ -114,7 +104,7 @@
     max-width: 100%;
   }
 
-  .feedbacks-card {
+  .feedbacks-card.swiper-slide {
     padding: 32px;
     min-height: 274px;
   }

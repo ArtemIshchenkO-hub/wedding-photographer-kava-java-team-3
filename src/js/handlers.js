@@ -1,7 +1,9 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
-import { openSuccessModal } from './success-modal';
+import { openSuccessModal } from './components/success-modal';
 
 import {
   fetchPortfolioCategories,
@@ -27,8 +29,6 @@ import {
 } from './render-functions';
 import { portfolioPhotosParams } from './constants';
 import { refs } from './refs';
-import Accordion from 'accordion-js';
-import 'accordion-js/dist/accordion.min.css';
 
 const galleryState = {
   totalItems: null,
@@ -153,7 +153,6 @@ export async function initFeedbacksSwiper() {
     renderFeedbacks(feedbacks);
     new Swiper('.feedbacks-slider', {
       slidesPerView: 1,
-      spaceBetween: 16,
 
       keyboard: {
         enabled: true,

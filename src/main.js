@@ -1,5 +1,5 @@
-import './js/header.js';
-import './js/success-modal.js';
+import './js/components/header.js';
+import { initSuccessModal } from './js/components/success-modal.js';
 import {
   getPortfolioCategories,
   handlePortfolioCategoryClick,
@@ -9,6 +9,7 @@ import {
   scrollUp,
   scrollFunction,
   initFeedbacksSwiper,
+  handleFormSubmit,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
 

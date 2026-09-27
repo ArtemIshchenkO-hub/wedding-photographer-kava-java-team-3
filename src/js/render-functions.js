@@ -31,11 +31,12 @@ export function renderPortfolioPhotos(photos) {
 export function renderFeedbacks(feedbacks) {
   const markup = feedbacks
     .map(
-      ({ descr, name }) => `<li class="feedbacks-card swiper-slide">
-          <p class="feedback-text">${descr}</p>
-          <h3 class="feedback-author">${name}</h3>
-        </li>
-      `
+      ({ descr, name }) => `
+      <li class="feedbacks-card swiper-slide">
+          <p class="feedback-text">${descr}</p>
+          <h3 class="feedback-author">${name}</h3>
+      </li>
+    `
     )
     .join('');
 
