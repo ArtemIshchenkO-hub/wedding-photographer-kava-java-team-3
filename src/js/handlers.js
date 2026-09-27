@@ -195,3 +195,16 @@ export function initAccordion() {
     panelClass: 'faq-answer',
   });
 }
+
+export function scrollUp() {
+  refs.pageTop.getBoundingClientRect().top;
+  window.scrollTo({ top: refs.pageTop });
+}
+
+export function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    refs.scrollUpBtn.style.display = 'block';
+  } else {
+    refs.scrollUpBtn.style.display = 'none';
+  }
+}

@@ -4,5 +4,7 @@ export const refs = {
   portfolioShowMoreBtn: document.querySelector('.portfolio-pagination-button'),
   contactsForm: document.querySelector('.contacts-form'),
   contactsBtn: document.querySelector('.contacts-btn'),
+  scrollUpBtn: document.querySelector('.scroll-up'),
+  pageTop: document.querySelector('.header'),
   feedbacksWraper: document.querySelector('#feedback-wrapper'),
 };

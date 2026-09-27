@@ -1,13 +1,13 @@
 import './js/header.js';
-import { initSuccessModal } from './js/success-modal.js';
-import { scrollUpBtn, scrollUp, scrollFunction } from './js/scroll-up.js';
+import './js/success-modal.js';
 import {
   getPortfolioCategories,
-  handleFormSubmit,
   handlePortfolioCategoryClick,
   handleShowMoreClick,
   initGallery,
   initAccordion,
+  scrollUp,
+  scrollFunction,
   initFeedbacksSwiper,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
@@ -22,10 +22,9 @@ refs.portfolioCategoryList.addEventListener(
   handlePortfolioCategoryClick
 );
 refs.portfolioShowMoreBtn.addEventListener('click', handleShowMoreClick);
-refs.contactsForm.addEventListener('submit', handleFormSubmit);
 
 window.onscroll = function () {
   scrollFunction();
 };
-scrollUpBtn.addEventListener('click', scrollUp);
+refs.scrollUpBtn.addEventListener('click', scrollUp);
 refs.contactsForm.addEventListener('submit', handleFormSubmit);
