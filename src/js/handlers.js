@@ -25,6 +25,8 @@ import {
 } from './render-functions';
 import { portfolioPhotosParams } from './constants';
 import { refs } from './refs';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 const galleryState = {
   totalItems: null,
@@ -117,8 +119,7 @@ export async function handleShowMoreClick() {
     removeLoadingState(refs.portfolioShowMoreBtn);
   }
 }
-refs.contactsForm.addEventListener('submit', handleFormSubmit);
-async function handleFormSubmit(event) {
+export async function handleFormSubmit(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const orderData = {
@@ -142,6 +143,7 @@ async function handleFormSubmit(event) {
     showError('Заповніть поля коректно');
   }
 }
+
 
 export async function initFeedbacksSwiper() {
   try {
@@ -182,3 +184,15 @@ export async function initFeedbacksSwiper() {
     showError(error.message);
   }
 }
+
+
+export function initAccordion() {
+  new Accordion('.faq-list', {
+    duration: 300,
+    showMultiple: false,
+    elementClass: 'faq-item',
+    triggerClass: 'faq-question-btn',
+    panelClass: 'faq-answer',
+  });
+}
+

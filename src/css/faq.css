@@ -78,26 +78,17 @@
 .faq-icon-close {
   opacity: 0;
   transform: scale(0.6);
+  stroke: var(--color-black);
 }
 
-.faq-item.is-open .faq-icon-plus {
+.faq-item.is-active .faq-icon-plus {
   opacity: 0;
   transform: scale(0.6);
 }
 
-.faq-item.is-open .faq-icon-close {
+.faq-item.is-active .faq-icon-close {
   opacity: 1;
   transform: scale(1);
-}
-
-.faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows var(--transition-base);
-}
-
-.faq-item.is-open .faq-answer {
-  grid-template-rows: 1fr;
 }
 
 .faq-answer-inner {
