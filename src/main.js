@@ -1,3 +1,4 @@
+import './js/feedback.js';
 import './js/header.js';
 import { initSuccessModal } from './js/success-modal.js';
 import { scrollUpBtn, scrollUp, scrollFunction } from './js/scroll-up.js';
