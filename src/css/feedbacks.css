@@ -26,6 +26,10 @@
   min-height: 328px;
 }
 
+.feedback-author {
+  margin-top: auto;
+}
+
 .feedbacks-bottom-controls {
   display: flex;
   justify-content: space-between;
