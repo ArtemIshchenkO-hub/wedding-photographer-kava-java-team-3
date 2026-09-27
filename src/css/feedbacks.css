@@ -65,6 +65,7 @@
 
   transition: opacity var(--transition-base);
 }
+
 .pagination-icon {
   stroke: var(--color-black);
 }

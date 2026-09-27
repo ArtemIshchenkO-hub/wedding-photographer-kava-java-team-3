@@ -139,3 +139,43 @@ async function handleFormSubmit(event) {
     showError('Заповніть поля коректно');
   }
 }
+
+export async function initFeedbcksSwiper() {
+  try {
+    const { feedbacks } = await fetchFeedbaks();
+    console.log(feedbacks);
+    renderFeedbacks(feedbacks);
+    new Swiper('.feedbacks-slider', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+  } catch (error) {
+    showError(error.message);
+  }
+}
