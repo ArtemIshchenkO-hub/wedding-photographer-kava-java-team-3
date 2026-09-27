@@ -29,3 +29,8 @@ export async function fetchPortfolioPhotos(isFirstRender = false) {
 export function createOrder(orderData) {
   return axios.post('/orders', orderData);
 }
+
+export async function fetchFeedbaks() {
+  const { data } = await axios.get(ENDPOINTS.feedbacks);
+  return data;
+}

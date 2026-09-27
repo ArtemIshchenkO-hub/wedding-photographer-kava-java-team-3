@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
 import { openSuccessModal } from './success-modal';
 
 import {
@@ -142,6 +145,47 @@ export async function handleFormSubmit(event) {
 }
 
 
+export async function initFeedbacksSwiper() {
+  try {
+    const { feedbacks } = await fetchFeedbaks();
+
+    renderFeedbacks(feedbacks);
+    new Swiper('.feedbacks-slider', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+  } catch (error) {
+    showError(error.message);
+  }
+}
+
+
 export function initAccordion() {
   new Accordion('.faq-list', {
     duration: 300,
@@ -151,3 +195,4 @@ export function initAccordion() {
     panelClass: 'faq-answer',
   });
 }
+
