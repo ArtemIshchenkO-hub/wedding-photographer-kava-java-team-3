@@ -144,7 +144,6 @@ export async function handleFormSubmit(event) {
   }
 }
 
-
 export async function initFeedbacksSwiper() {
   try {
     const { feedbacks } = await fetchFeedbaks();
@@ -185,7 +184,6 @@ export async function initFeedbacksSwiper() {
   }
 }
 
-
 export function initAccordion() {
   new Accordion('.faq-list', {
     duration: 300,
@@ -196,3 +194,15 @@ export function initAccordion() {
   });
 }
 
+export function scrollUp() {
+  refs.pageTop.getBoundingClientRect().top;
+  window.scrollTo({ top: refs.pageTop });
+}
+
+export function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    refs.scrollUpBtn.style.display = 'block';
+  } else {
+    refs.scrollUpBtn.style.display = 'none';
+  }
+}
