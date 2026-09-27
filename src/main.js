@@ -8,11 +8,12 @@ import {
   handlePortfolioCategoryClick,
   handleShowMoreClick,
   initGallery,
+  initAccordion,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
-import './js/accordion.js';
 
 initSuccessModal();
+initAccordion();
 getPortfolioCategories();
 initGallery();
 refs.portfolioCategoryList.addEventListener(
