@@ -42,6 +42,7 @@ label {
 }
 
 button {
+  position: relative;
   user-select: none;
 }
 
