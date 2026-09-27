@@ -6,6 +6,7 @@ import {
   handlePortfolioCategoryClick,
   handleShowMoreClick,
   initGallery,
+  handleFormSubmit,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
 
@@ -21,3 +22,4 @@ window.onscroll = function () {
   scrollFunction();
 };
 scrollUpBtn.addEventListener('click', scrollUp);
+refs.contactsForm.addEventListener('submit', handleFormSubmit);

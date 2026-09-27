@@ -78,6 +78,25 @@
   height: 44px;
   transition: var(--transition-base);
 }
+.contacts-input:focus,
+.contacts-textarea:focus,
+.contacts-input:hover,
+.contacts-textarea:hover {
+  border-color: var(--color-accent);
+  transition: var(--transition-base);
+}
+.contacts-error-text {
+  display: none;
+  color: var(--color-error);
+}
+.contacts-input:user-invalid,
+.contacts-textarea:user-invalid {
+  border-color: var(--color-error);
+}
+.contacts-input:user-invalid ~ .contacts-error-text,
+.contacts-textarea:user-invalid ~ .contacts-error-text {
+  display: block;
+}
 
 @media only screen and (min-width: 768px) {
   .container.contacts-container {
