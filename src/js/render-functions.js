@@ -19,7 +19,7 @@ export function renderPortfolioPhotos(photos) {
     .map(
       ({ _id, img, title }) => `
         <li class="portfolio-gallery-item" id="${_id}">
-            <img src="${img}" alt="${title}" class="gallery-image" width="335px" height="335px" loading="lazy" />
+            <img src="${img}" alt="${title}" class="gallery-image" width="335" height="335" loading="lazy" />
         </li>
         `
     )

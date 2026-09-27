@@ -1,6 +1,3 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
-
 const wrapper = document.getElementById('feedback-wrapper');
 
 if (wrapper) {
