@@ -51,10 +51,77 @@
   opacity: var(--opacity-btn-disabled);
 }
 
+button.is-loading {
+  color: transparent;
+  pointer-events: none;
+}
+
+button.is-loading::after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 23px;
+  height: 23px;
+
+  border: 2px solid var(--color-white);
+  border-top-color: var(--color-black);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  animation: loading 0.7s linear infinite;
+}
+
+body.is-loading {
+  overflow-y: hidden;
+}
+
+body.is-loading::before {
+  content: '';
+
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background-color: rgb(0 0 0 / 50%);
+}
+
+body.is-loading::after {
+  content: '';
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+
+  width: 36px;
+  height: 36px;
+
+  border: 3px solid var(--color-accent-light);
+  border-top-color: var(--color-black);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  animation: loading 0.7s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding: 0 32px;
+  }
+
+  body.is-loading::after {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -66,5 +133,10 @@
 
   .section {
     padding: 92px 0;
+  }
+
+  body.is-loading::after {
+    width: 70px;
+    height: 70px;
   }
 }

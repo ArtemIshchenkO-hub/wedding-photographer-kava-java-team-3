@@ -2,7 +2,21 @@ import './js/feedback.js';
 import './js/header.js';
 import './js/success-modal.js';
 import { scrollUpBtn, scrollUp, scrollFunction } from './js/scroll-up.js';
-import './js/category-portfolio.js';
+import {
+  getPortfolioCategories,
+  handlePortfolioCategoryClick,
+  handleShowMoreClick,
+  initGallery,
+} from './js/handlers.js';
+import { refs } from './js/refs.js';
+
+getPortfolioCategories();
+initGallery();
+refs.portfolioCategoryList.addEventListener(
+  'click',
+  handlePortfolioCategoryClick
+);
+refs.portfolioShowMoreBtn.addEventListener('click', handleShowMoreClick);
 
 window.onscroll = function () {
   scrollFunction();
