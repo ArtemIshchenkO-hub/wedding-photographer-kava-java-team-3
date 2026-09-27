@@ -22,7 +22,7 @@
     <script type="module" crossorigin src="/wedding-photographer-kava-java-team-3/index.js"></script>
     <link rel="modulepreload" crossorigin href="/wedding-photographer-kava-java-team-3/assets/vendor-BeEMt6uv.js">
     <link rel="stylesheet" crossorigin href="/wedding-photographer-kava-java-team-3/assets/vendor-Bso8zzPG.css">
-    <link rel="stylesheet" crossorigin href="/wedding-photographer-kava-java-team-3/assets/index-OpYMXOeD.css">
+    <link rel="stylesheet" crossorigin href="/wedding-photographer-kava-java-team-3/assets/index-CQSI0DLG.css">
   </head>
 
   <body>
@@ -418,7 +418,12 @@
             placeholder="Maria"
             autocomplete="name"
             required
+            minlength="2"
+            maxlength="64"
           />
+          <span class="contacts-error-text"
+            >Please enter your name (2–64 characters)</span
+          >
         </label>
         <label class="contacts-label">
           <span class="contacts-label-text">Phone*</span>
@@ -429,15 +434,24 @@
             placeholder="380507224861"
             autocomplete="tel"
             required
+            pattern="[0-9]{12}"
           />
+          <span class="contacts-error-text"
+            >Enter a valid phone number (12 digits, no symbols)</span
+          >
         </label>
         <label class="contacts-label">
           <span class="contacts-label-text">Message</span>
           <textarea
             class="contacts-textarea"
             name="message"
+            minlength="5"
+            maxlength="256"
             placeholder="Tell me a little about you and your special day. Don't forget to include your wedding date, venue, and what you're most excited about..."
           ></textarea>
+          <span class="contacts-error-text"
+            >Message should be 5–256 characters long</span
+          >
         </label>
         <button class="contacts-btn button-main" type="submit">
           Let's Talk
