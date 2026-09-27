@@ -126,13 +126,14 @@ async function handleFormSubmit(event) {
   const isValid = validateOrderData(orderData);
   if (isValid) {
     try {
-      addLoadingState(refs.contactsForm);
+      addLoadingState(refs.contactsBtn);
       await createOrder(orderData);
       openSuccessModal();
+      event.target.reset();
     } catch (error) {
       showError(error.message);
     } finally {
-      removeLoadingState(refs.contactsForm);
+      removeLoadingState(refs.contactsBtn);
     }
   } else {
     showError('Заповніть поля коректно');
