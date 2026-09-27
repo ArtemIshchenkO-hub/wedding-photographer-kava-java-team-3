@@ -8,11 +8,13 @@ import {
   initAccordion,
   scrollUp,
   scrollFunction,
+  initFeedbacksSwiper,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
 
 initSuccessModal();
 initAccordion();
+initFeedbacksSwiper();
 getPortfolioCategories();
 initGallery();
 refs.portfolioCategoryList.addEventListener(

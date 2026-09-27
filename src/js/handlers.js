@@ -7,6 +7,7 @@ import {
   fetchPortfolioCategories,
   fetchPortfolioPhotos,
   createOrder,
+  fetchFeedbaks,
 } from './api-functions';
 import {
   addLoadingState,
@@ -22,6 +23,7 @@ import {
 import {
   renderPortfolioCategories,
   renderPortfolioPhotos,
+  renderFeedbacks,
 } from './render-functions';
 import { portfolioPhotosParams } from './constants';
 import { refs } from './refs';
