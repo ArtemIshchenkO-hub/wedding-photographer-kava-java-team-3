@@ -1,3 +1,6 @@
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
+
 import { openSuccessModal } from './success-modal';
 
 import {
@@ -22,6 +25,8 @@ import {
 } from './render-functions';
 import { portfolioPhotosParams } from './constants';
 import { refs } from './refs';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 const galleryState = {
   totalItems: null,
@@ -138,3 +143,56 @@ export async function handleFormSubmit(event) {
     showError('Заповніть поля коректно');
   }
 }
+
+
+export async function initFeedbacksSwiper() {
+  try {
+    const { feedbacks } = await fetchFeedbaks();
+
+    renderFeedbacks(feedbacks);
+    new Swiper('.feedbacks-slider', {
+      slidesPerView: 1,
+      spaceBetween: 16,
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+    });
+  } catch (error) {
+    showError(error.message);
+  }
+}
+
+
+export function initAccordion() {
+  new Accordion('.faq-list', {
+    duration: 300,
+    showMultiple: false,
+    elementClass: 'faq-item',
+    triggerClass: 'faq-question-btn',
+    panelClass: 'faq-answer',
+  });
+}
+

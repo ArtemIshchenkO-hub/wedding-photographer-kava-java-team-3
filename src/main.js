@@ -6,9 +6,12 @@ import {
   handlePortfolioCategoryClick,
   handleShowMoreClick,
   initGallery,
+  initAccordion,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
 
+initSuccessModal();
+initAccordion();
 getPortfolioCategories();
 initGallery();
 refs.portfolioCategoryList.addEventListener(
@@ -21,3 +24,4 @@ window.onscroll = function () {
   scrollFunction();
 };
 scrollUpBtn.addEventListener('click', scrollUp);
+refs.contactsForm.addEventListener('submit', handleFormSubmit);

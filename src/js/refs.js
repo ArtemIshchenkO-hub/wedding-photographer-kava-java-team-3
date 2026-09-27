@@ -5,3 +5,5 @@ export const refs = {
   contactsForm: document.querySelector('.contacts-form'),
   contactsBtn: document.querySelector('.contacts-btn'),
 };
+
+feedbacksWraper: document.querySelector('#feedback-wrapper');
