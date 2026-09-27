@@ -26,3 +26,6 @@ export async function fetchPortfolioPhotos(isFirstRender = false) {
   const { data } = await axios.get(ENDPOINTS.photos, { params });
   return data;
 }
+export function createOrder(orderData) {
+  return axios.post('/orders', orderData);
+}

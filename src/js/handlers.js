@@ -1,6 +1,9 @@
+import { openSuccessModal } from './success-modal';
+
 import {
   fetchPortfolioCategories,
   fetchPortfolioPhotos,
+  createOrder,
 } from './api-functions';
 import {
   addLoadingState,
@@ -11,6 +14,7 @@ import {
   showNotification,
   toggleActiveClass,
   toggleShowMoreBtn,
+  validateOrderData,
 } from './helpers';
 import {
   renderPortfolioCategories,
@@ -108,5 +112,30 @@ export async function handleShowMoreClick() {
     showError(error.message);
   } finally {
     removeLoadingState(refs.portfolioShowMoreBtn);
+  }
+}
+refs.contactsForm.addEventListener('submit', handleFormSubmit);
+async function handleFormSubmit(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const orderData = {
+    name: formData.get('name'),
+    phone: formData.get('phone'),
+    message: formData.get('message'),
+  };
+  const isValid = validateOrderData(orderData);
+  if (isValid) {
+    try {
+      addLoadingState(refs.contactsBtn);
+      await createOrder(orderData);
+      openSuccessModal();
+      event.target.reset();
+    } catch (error) {
+      showError(error.message);
+    } finally {
+      removeLoadingState(refs.contactsBtn);
+    }
+  } else {
+    showError('Заповніть поля коректно');
   }
 }
