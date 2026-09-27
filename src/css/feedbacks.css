@@ -96,12 +96,11 @@
 
   .feedback-list {
     display: flex;
-    gap: 24px;
   }
 
   .feedbacks-card {
     padding: 20px;
-    flex-basis: calc((100% - 48px) / 3);
+
     min-height: 412px;
   }
 }
