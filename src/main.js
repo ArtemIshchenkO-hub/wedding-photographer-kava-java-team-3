@@ -27,3 +27,4 @@ window.onscroll = function () {
   scrollFunction();
 };
 scrollUpBtn.addEventListener('click', scrollUp);
+refs.contactsForm.addEventListener('submit', handleFormSubmit);
