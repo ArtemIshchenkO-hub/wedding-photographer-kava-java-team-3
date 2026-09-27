@@ -114,8 +114,7 @@ export async function handleShowMoreClick() {
     removeLoadingState(refs.portfolioShowMoreBtn);
   }
 }
-refs.contactsForm.addEventListener('submit', handleFormSubmit);
-async function handleFormSubmit(event) {
+export async function handleFormSubmit(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const orderData = {
