@@ -7,6 +7,7 @@ import {
   fetchPortfolioCategories,
   fetchPortfolioPhotos,
   createOrder,
+  fetchFeedbaks,
 } from './api-functions';
 import {
   addLoadingState,
@@ -22,6 +23,7 @@ import {
 import {
   renderPortfolioCategories,
   renderPortfolioPhotos,
+  renderFeedbacks,
 } from './render-functions';
 import { portfolioPhotosParams } from './constants';
 import { refs } from './refs';
@@ -144,7 +146,6 @@ export async function handleFormSubmit(event) {
   }
 }
 
-
 export async function initFeedbacksSwiper() {
   try {
     const { feedbacks } = await fetchFeedbaks();
@@ -185,7 +186,6 @@ export async function initFeedbacksSwiper() {
   }
 }
 
-
 export function initAccordion() {
   new Accordion('.faq-list', {
     duration: 300,
@@ -195,4 +195,3 @@ export function initAccordion() {
     panelClass: 'faq-answer',
   });
 }
-

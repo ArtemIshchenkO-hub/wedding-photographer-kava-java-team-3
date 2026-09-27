@@ -1,4 +1,3 @@
-import './js/feedback.js';
 import './js/header.js';
 import { initSuccessModal } from './js/success-modal.js';
 import { scrollUpBtn, scrollUp, scrollFunction } from './js/scroll-up.js';
@@ -9,11 +8,13 @@ import {
   handleShowMoreClick,
   initGallery,
   initAccordion,
+  initFeedbacksSwiper,
 } from './js/handlers.js';
 import { refs } from './js/refs.js';
 
 initSuccessModal();
 initAccordion();
+initFeedbacksSwiper();
 getPortfolioCategories();
 initGallery();
 refs.portfolioCategoryList.addEventListener(
